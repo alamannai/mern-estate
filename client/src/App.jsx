@@ -6,13 +6,17 @@ import About from "./pages/About"
 import Profile from "./pages/Profile"
 import Header from "./components/Header"
 import PrivateRoute from "./components/PrivateRoute"
+import Calendar from "./pages/Calendar"
 
 export default function App() {
   return (
     <BrowserRouter>
-      <Header />
+      {/*<Header />*/}
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="/" element={<Home />} > 
+          <Route path="/calendar" element={<Calendar />} />
+        
+        </Route>
         <Route path="/sign-in" element={<SignIn />} />
         <Route path="/sign-up" element={<SignUp />} />
         <Route path="/about" element={<About />} />
