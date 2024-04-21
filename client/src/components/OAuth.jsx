@@ -34,12 +34,11 @@ export default function OAuth() {
         }
     }
   return (
-    <button 
-        type='button'
-        onClick={handleGoogleClick} 
-        className='bg-red-700 text-white p-3 rounded-lg uppercase hover:opacity-95'
+    <button onClick={handleGoogleClick} 
+        className="w-full border border-gray-300 text-md p-2 rounded-lg mb-6 hover:bg-black hover:text-white"
     >
-        CONTINUER AVEC GOOGLE
+        <img src="./src/assets/google.svg" alt="img" className="w-6 h-6 inline mr-2" />
+        Connecter avec Google
     </button>
   )
 }
