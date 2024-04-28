@@ -43,14 +43,14 @@ const Login = () => {
  
   }
 
-  console.log(formData)
+  console.log(error)
   return(
     <div className="flex items-center justify-center min-h-screen bg-gray-100">
       <div
         className="relative flex flex-col m-6 space-y-6 bg-white shadow-2xl rounded-2xl md:flex-row md:space-y-0"
       >
         <div className="flex flex-col justify-center p-6 md:p-14">
-          <span className="mb-3 text-4xl font-bold">Bienvenu</span>
+          <span className="mb-3 text-4xl font-bold">Bienvenue</span>
           <span className="font-light text-gray-400 mb-4">
             Veuillez entrer vos coordonnées
           </span>
@@ -70,8 +70,8 @@ const Login = () => {
             <span className="mb-2 text-md">Mot de passe</span>
             <input
               type="password"
-              name="pass"
-              id="pass"
+              name="password"
+              id="password"
               className="w-full p-2 border border-gray-300 rounded-md placeholder:font-light placeholder:text-gray-500"
               onChange={handleChange}
             />
@@ -88,6 +88,9 @@ const Login = () => {
           >
             {loading? 'loading...':'Se connecter'}
           </button>
+          <div className="text-center text-gray-400">
+            {error && <p className='text-red-500 mt-2'>{"Vérifiez vos informations..."}</p> }
+          </div>
           <OAuth />
           </form>
 
